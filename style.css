@@ -1,0 +1,520 @@
+/* ============================================
+   ОСНОВНЫЕ НАСТРОЙКИ
+   ============================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+
+    background: #f4f3ef;
+    color: #242424;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================
+   ОСНОВНОЙ КОНТЕЙНЕР
+   ============================================ */
+
+body > * {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ============================================
+   ЗАГОЛОВКИ
+   ============================================ */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    font-size: 38px;
+    font-weight: 500;
+
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    margin-top: 42px;
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/* ============================================
+   ССЫЛКИ
+   ============================================ */
+
+a {
+    color: #303030;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================================
+   НАВИГАЦИЯ
+   ============================================ */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1400px;
+
+    margin: 28px auto 24px;
+}
+
+.navigation button {
+    padding: 10px 16px;
+
+    border: 1px solid #b9b7b0;
+    border-radius: 5px;
+
+    background: #ebe9e3;
+    color: #292929;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.navigation button:hover {
+    background: #dedcd5;
+    border-color: #96948d;
+}
+
+.navigation button:active {
+    transform: translateY(1px);
+}
+
+
+/* ============================================
+   НАЗВАНИЕ НЕДЕЛИ
+   ============================================ */
+
+#weekTitle {
+    position: relative;
+
+    margin-bottom: 2px;
+    padding-left: 14px;
+
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#weekTitle::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+
+    width: 4px;
+
+    border-radius: 3px;
+}
+
+
+/* ============================================
+   ЦВЕТ НЕДЕЛИ
+   ============================================ */
+
+/* Красная неделя */
+
+body.red-week #weekTitle::before {
+    background: #a33;
+}
+
+body.red-week #schedule {
+    border-top: 4px solid #a33;
+}
+
+
+/* Синяя неделя */
+
+body.blue-week #weekTitle::before {
+    background: #3572a5;
+}
+
+body.blue-week #schedule {
+    border-top: 4px solid #3572a5;
+}
+
+
+/* ============================================
+   ДАТЫ НЕДЕЛИ
+   ============================================ */
+
+#weekDates {
+    color: #77756f;
+
+    font-size: 16px;
+
+    padding-left: 14px;
+}
+
+
+/* ============================================
+   ТАБЛИЦА РАСПИСАНИЯ
+   ============================================ */
+
+#schedule {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    margin-top: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #c9c7c0;
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    table-layout: fixed;
+}
+
+
+/* ============================================
+   ЯЧЕЙКИ
+   ============================================ */
+
+#schedule th,
+#schedule td {
+    padding: 15px 12px;
+
+    border-right: 1px solid #d8d6cf;
+    border-bottom: 1px solid #d8d6cf;
+
+    vertical-align: top;
+}
+
+#schedule th:last-child,
+#schedule td:last-child {
+    border-right: none;
+}
+
+#schedule tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ============================================
+   ЗАГОЛОВКИ ТАБЛИЦЫ
+   ============================================ */
+
+#schedule th {
+    background: #ebe9e3;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+#schedule th:first-child {
+    width: 80px;
+}
+
+#schedule th:nth-child(2) {
+    width: 135px;
+}
+
+
+/* ============================================
+   ПЕРВЫЙ СТОЛБЕЦ
+   ============================================ */
+
+#schedule td:first-child {
+    background: #f0eee8;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================
+   ВРЕМЯ
+   ============================================ */
+
+#schedule td:nth-child(2) {
+    background: #faf9f6;
+
+    color: #66645e;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================
+   ЗАНЯТИЯ
+   ============================================ */
+
+#schedule td:not(:first-child):not(:nth-child(2)) {
+    min-height: 80px;
+
+    font-size: 15px;
+}
+
+#schedule td a {
+    display: block;
+
+    height: 100%;
+
+    color: #242424;
+
+    text-decoration: none;
+
+    transition:
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+#schedule td a:hover {
+    background: #f1f0eb;
+
+    text-decoration: none;
+
+    box-shadow:
+        inset 0 0 0 1px #c5c3bc;
+
+    border-radius: 4px;
+}
+
+#schedule td strong {
+    font-weight: 600;
+}
+
+
+/* ============================================
+   СОБЫТИЯ
+   ============================================ */
+
+#events {
+    max-width: 1400px;
+
+    margin-top: 25px;
+    padding: 15px 18px;
+
+    background: #ebe9e3;
+
+    border-left: 3px solid #9b9992;
+    border-radius: 4px;
+
+    color: #4b4a46;
+
+    font-size: 15px;
+}
+
+
+/* ============================================
+   СТРАНИЦА ЗАНЯТИЯ
+   ============================================ */
+
+body:has(#lessonNumber) {
+    max-width: 1000px;
+}
+
+
+/* ============================================
+   ТАБЛИЦЫ НА СТРАНИЦЕ ЗАНЯТИЯ
+   ============================================ */
+
+body:has(#lessonNumber) table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #ffffff;
+
+    border: 1px solid #c9c7c0;
+
+    border-radius: 6px;
+}
+
+body:has(#lessonNumber) th,
+body:has(#lessonNumber) td {
+    padding: 13px 15px;
+
+    border: 1px solid #d8d6cf;
+
+    text-align: left;
+}
+
+body:has(#lessonNumber) th {
+    width: 190px;
+
+    background: #ebe9e3;
+
+    font-weight: 600;
+}
+
+
+/* ============================================
+   ЗАГОЛОВОК СТРАНИЦЫ ЗАНЯТИЯ
+   ============================================ */
+
+body:has(#lessonNumber) h1 {
+    margin-bottom: 12px;
+}
+
+
+/* ============================================
+   БЛОКИ С ТЕКСТОМ
+   ============================================ */
+
+body:has(#lessonNumber) p {
+    color: #3f3e3a;
+}
+
+
+/* ============================================
+   ДОМАШНЕЕ ЗАДАНИЕ
+   ============================================ */
+
+.homework {
+    padding: 15px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #c9c7c0;
+    border-radius: 6px;
+}
+
+.homework p {
+    margin: 0;
+
+    color: #3f3e3a;
+}
+
+
+/* ============================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ============================================ */
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #weekTitle {
+        font-size: 25px;
+    }
+
+    .navigation {
+        gap: 10px;
+    }
+
+    .navigation button {
+        padding: 8px 11px;
+
+        font-size: 14px;
+    }
+
+    #schedule {
+        font-size: 13px;
+    }
+
+    #schedule th,
+    #schedule td {
+        padding: 10px 7px;
+    }
+
+    #schedule th:first-child {
+        width: 60px;
+    }
+
+    #schedule th:nth-child(2) {
+        width: 105px;
+    }
+
+}
+
+
+/* ============================================
+   СОВСЕМ УЗКИЙ ЭКРАН
+   ============================================ */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+    }
+
+    #schedule {
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: normal;
+    }
+
+    #schedule th,
+    #schedule td {
+        min-width: 125px;
+    }
+
+    #schedule th:first-child,
+    #schedule td:first-child {
+        min-width: 60px;
+    }
+
+    #schedule th:nth-child(2),
+    #schedule td:nth-child(2) {
+        min-width: 105px;
+    }
+
+}
