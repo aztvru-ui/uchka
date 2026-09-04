@@ -5,6 +5,7 @@
 const params =
     new URLSearchParams(window.location.search);
 
+
 const dateKey =
     params.get("date");
 
@@ -16,7 +17,7 @@ const lessonNumber =
 
 
 // ============================================
-// ПРОВЕРКА ПАРАМЕТРОВ
+// ПРОВЕРКА ДАННЫХ ИЗ ССЫЛКИ
 // ============================================
 
 if (!dateKey || !day || !lessonNumber) {
@@ -230,12 +231,15 @@ if (!dateKey || !day || !lessonNumber) {
         const start =
             new Date(2026, 7, 31);
 
+
         const target =
             new Date(date);
+
 
         const difference =
             target.getTime() -
             start.getTime();
+
 
         return Math.floor(
             difference /
@@ -267,6 +271,7 @@ if (!dateKey || !day || !lessonNumber) {
     const dateParts =
         dateKey.split("-");
 
+
     const date =
         new Date(
             Number(dateParts[0]),
@@ -281,6 +286,7 @@ if (!dateKey || !day || !lessonNumber) {
 
     const weekNumber =
         getWeekNumber(date);
+
 
     let schedule;
 
@@ -305,17 +311,15 @@ if (!dateKey || !day || !lessonNumber) {
 
 
     // ========================================
-    // ПОЛУЧАЕМ ДОПОЛНИТЕЛЬНЫЕ ДАННЫЕ
+    // ПОЛУЧАЕМ ДАННЫЕ КОНКРЕТНОЙ ПАРЫ
     // ========================================
 
-    let data = {};
+    const lessonDataKey =
+        dateKey + "_" + lessonNumber;
 
-    if (typeof lessonData !== "undefined") {
 
-        data =
-            lessonData[dateKey] || {};
-
-    }
+    const data =
+        lessonData[lessonDataKey] || {};
 
 
     // ========================================
