@@ -2,92 +2,194 @@
 <html lang="ru">
 
 <head>
+
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Учебный навигатор</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
+
 
 <body>
 
-    <h1>Учебный навигатор</h1>
+    <h1>
+        Учебный навигатор
+    </h1>
+
 
     <h2 id="weekTitle"></h2>
 
+
     <p id="weekDates"></p>
 
-    <p>
-        <button id="previousWeek">← Предыдущая</button>
-        <button id="currentWeek">Текущая неделя</button>
-        <button id="nextWeek">Следующая →</button>
-    </p>
+
+    <!-- ============================================
+         НАВИГАЦИЯ ПО НЕДЕЛЯМ
+         ============================================ -->
+
+    <div class="navigation">
+
+        <button id="previousWeek">
+            ← Предыдущая
+        </button>
+
+        <button id="currentWeek">
+            Текущая неделя
+        </button>
+
+        <button id="nextWeek">
+            Следующая →
+        </button>
+
+    </div>
 
 
-    <h2>Расписание</h2>
+    <!-- ============================================
+         РАСПИСАНИЕ
+         ============================================ -->
 
-    <table id="schedule" border="1">
+    <h2>
+        Расписание
+    </h2>
+
+
+    <table id="schedule">
 
         <tr>
-            <th>Пара</th>
-            <th>Время</th>
+
+            <th>
+                Пара
+            </th>
+
+            <th>
+                Время
+            </th>
+
             <th id="monday"></th>
+
             <th id="tuesday"></th>
+
             <th id="wednesday"></th>
+
             <th id="thursday"></th>
+
             <th id="friday"></th>
+
         </tr>
 
+
         <tr>
-            <td>1 пара</td>
+
+            <td>
+                1 пара
+            </td>
+
             <td id="time1"></td>
+
             <td id="monday1"></td>
+
             <td id="tuesday1"></td>
+
             <td id="wednesday1"></td>
+
             <td id="thursday1"></td>
+
             <td id="friday1"></td>
+
         </tr>
 
+
         <tr>
-            <td>2 пара</td>
+
+            <td>
+                2 пара
+            </td>
+
             <td id="time2"></td>
+
             <td id="monday2"></td>
+
             <td id="tuesday2"></td>
+
             <td id="wednesday2"></td>
+
             <td id="thursday2"></td>
+
             <td id="friday2"></td>
+
         </tr>
 
+
         <tr>
-            <td>3 пара</td>
+
+            <td>
+                3 пара
+            </td>
+
             <td id="time3"></td>
+
             <td id="monday3"></td>
+
             <td id="tuesday3"></td>
+
             <td id="wednesday3"></td>
+
             <td id="thursday3"></td>
+
             <td id="friday3"></td>
+
         </tr>
 
+
         <tr>
-            <td>4 пара</td>
+
+            <td>
+                4 пара
+            </td>
+
             <td id="time4"></td>
+
             <td id="monday4"></td>
+
             <td id="tuesday4"></td>
+
             <td id="wednesday4"></td>
+
             <td id="thursday4"></td>
+
             <td id="friday4"></td>
+
         </tr>
 
     </table>
 
 
-    <h2>События недели</h2>
+    <!-- ============================================
+         СОБЫТИЯ НЕДЕЛИ
+         ============================================ -->
+
+    <h2>
+        События недели
+    </h2>
+
 
     <div id="events">
         Событий нет.
     </div>
 
 
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+
     <script src="script.js"></script>
+
 
 </body>
 

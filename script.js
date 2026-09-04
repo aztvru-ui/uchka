@@ -73,6 +73,7 @@ const redSchedule = {
         },
 
         4: null
+
     },
 
 
@@ -145,7 +146,6 @@ const redSchedule = {
 const blueSchedule = {
 
     monday: {},
-
 
     tuesday: {
 
@@ -244,6 +244,7 @@ function formatDate(date) {
         String(date.getMonth() + 1).padStart(2, "0");
 
     return day + "." + month;
+
 }
 
 
@@ -259,6 +260,7 @@ function getDateKey(date) {
         String(date.getDate()).padStart(2, "0");
 
     return year + "-" + month + "-" + day;
+
 }
 
 
@@ -273,6 +275,7 @@ function getWeekStart(weekNumber) {
     );
 
     return date;
+
 }
 
 
@@ -289,6 +292,7 @@ function getWeekName() {
     }
 
     return "Синяя неделя";
+
 }
 
 
@@ -301,6 +305,7 @@ function getSchedule() {
     }
 
     return blueSchedule;
+
 }
 
 
@@ -342,20 +347,26 @@ function updateSchedule() {
     document.getElementById("weekTitle").textContent =
         getWeekName();
 
-        document.body.classList.remove(
-    "red-week",
-    "blue-week"
-);
 
-if (currentWeek % 2 === 1) {
+    // ========================================
+    // ЦВЕТ НЕДЕЛИ
+    // ========================================
 
-    document.body.classList.add("red-week");
+    document.body.classList.remove(
+        "red-week",
+        "blue-week"
+    );
 
-} else {
 
-    document.body.classList.add("blue-week");
+    if (currentWeek % 2 === 1) {
 
-}
+        document.body.classList.add("red-week");
+
+    } else {
+
+        document.body.classList.add("blue-week");
+
+    }
 
 
     // ========================================

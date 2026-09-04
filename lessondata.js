@@ -20,6 +20,10 @@ const lessonData = {
 
         reportTopic: "Синтаксический разбор",
 
+        classroom: "—",
+
+        teacher: "—",
+
         notes: "Заметок пока нет."
 
     }
