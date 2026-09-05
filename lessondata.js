@@ -71,7 +71,7 @@ const lessonData = {
       notes: "Разрабатывать проекты",
 
       materials: [
-        {name: "Пособие", url: "https://vk.ru/doc353325313_700771689?hash=YrXPS4FSdwe5NTIWl8oYdmmwDIWypx11zL12kegRkYg&dl=rvdO5fpce7P1hjumDzTxrIfOLpLBK4JTuzIFwerlYPP&from_module=vkmsg_desktop"}
+        {name: "Пособие", url: "files/Kupri.pdf"}
 
   },
 
