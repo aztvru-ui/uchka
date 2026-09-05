@@ -451,6 +451,45 @@ if (!dateKey || !day || !lessonNumber) {
             data.notes ||
             "Заметок пока нет.";
 
+            // ============================================
+      // ВЫВОД МАТЕРИАЛОВ
+      // ============================================
+
+      const materialsTable = document.getElementById("materialsTable");
+
+      if (materialsTable && typeof data !== "undefined") {
+          if (data.materials && data.materials.length > 0) {
+              let tableHTML = `
+                  <tr>
+                      <th>Название</th>
+                      <th>Ссылка</th>
+                  </tr>
+              `;
+
+              data.materials.forEach(item => {
+                  tableHTML += `
+                      <tr>
+                          <td>${item.name}</td>
+                          <td><a href="${item.url}" target="_blank">Открыть</a></td>
+                      </tr>
+                  `;
+              });
+
+              materialsTable.innerHTML = tableHTML;
+          } else {
+              materialsTable.innerHTML = `
+                  <tr>
+                      <th>Название</th>
+                      <th>Ссылка</th>
+                  </tr>
+                  <tr>
+                      <td>Материалы пока не добавлены</td>
+                      <td>—</td>
+                  </tr>
+              `;
+          }
+      }
+
     }
 
 }
