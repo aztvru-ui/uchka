@@ -50,8 +50,29 @@ const lessonData = {
 
         teacher: "—",
 
-        notes: "Мой журнал \"Москвитянин\""
+        notes: "Мой журнал Москвитянин"
 
-    }
+    },
+
+    "2026-09-09_4": {
+
+      homework: "В пособии ответить на вопросы на стр. 16 и быть готовым отвечать на занятии",
+
+      topic: "бредни Куна",
+
+      reportStudent: "-",
+
+      reportTopic: "-",
+
+      classroom: "—",
+
+      teacher: "—",
+
+      notes: "Разрабатывать проекты",
+
+      materials: [
+        {name: "Пособие", url: "https://vk.ru/doc353325313_700771689?hash=YrXPS4FSdwe5NTIWl8oYdmmwDIWypx11zL12kegRkYg&dl=rvdO5fpce7P1hjumDzTxrIfOLpLBK4JTuzIFwerlYPP&from_module=vkmsg_desktop"}
+
+  },
 
 };
