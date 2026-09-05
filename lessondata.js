@@ -75,4 +75,22 @@ const lessonData = {
       ]
   },
 
+  "2026-09-10_2": {
+
+    homework: "упражнение 164",
+
+    topic: "Причастие",
+
+    reportStudent: "-",
+
+    reportTopic: "-",
+
+    classroom: "—",
+
+    teacher: "—",
+
+    notes: "-",
+
+  },
+
 };
