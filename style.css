@@ -513,4 +513,19 @@ body:has(#lessonNumber) p {
         min-width: 105px;
     }
 
+    /* ============================================
+   АДАПТИВНОСТЬ ТАБЛИЦ ДЛЯ МОБИЛЬНЫХ
+   ============================================ */
+
+table {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+body:has(#lessonNumber) table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
 }
