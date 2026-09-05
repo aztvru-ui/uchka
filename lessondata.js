@@ -91,7 +91,7 @@ const lessonData = {
 
     notes: "-",
 
-    materials: [-]
+    materials: []
 
   },
 
