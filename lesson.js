@@ -319,7 +319,7 @@ if (!dateKey || !day || !lessonNumber) {
 
 
     const data =
-        lessondata[lessonDataKey] || {};
+        lessonData[lessonDataKey] || {};
 
 
     // ========================================

@@ -50,7 +50,7 @@ const lessonData = {
 
         teacher: "—",
 
-        notes: "Мой журнал Москвитянин"
+        notes: "Мой журнал \ "Москвитянин""
 
     }
 
