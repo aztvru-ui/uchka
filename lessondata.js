@@ -91,8 +91,6 @@ const lessonData = {
 
     notes: "-",
 
-    materials: []
-
   },
 
   "2026-09-11_4": {
