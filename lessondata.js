@@ -72,6 +72,7 @@ const lessonData = {
 
       materials: [
         {name: "Пособие", url: "files/Kupri.pdf"}
+      ]
 
   },
 
