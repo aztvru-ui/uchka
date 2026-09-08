@@ -133,7 +133,7 @@ const lessonData = {
 
     teacher: "—",
 
-    notes: "МОе - Маранцман!",
+    notes: "МОе - Маранцман!"
 
 
   },
@@ -152,7 +152,7 @@ const lessonData = {
 
     teacher: "—",
 
-    notes: "-",
+    notes: "-"
 
   },
 
