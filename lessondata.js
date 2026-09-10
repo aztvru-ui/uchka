@@ -192,7 +192,7 @@ const lessonData = {
 
     materials: [
       {name: "Пособие", url: "files/Kupri.pdf"}
-
+    ]
   },
 
   "2026-09-17_2": {
