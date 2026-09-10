@@ -280,7 +280,42 @@ function getWeekStart(weekNumber) {
 
 
 // ============================================
-// ОПРЕДЕЛЕНИЕ НЕДЕЛИ
+// ОПРЕДЕЛЕНИЕ ТЕКУЩЕЙ НЕДЕЛИ
+// ============================================
+
+function getCurrentWeek() {
+
+    const today =
+        new Date();
+
+
+    const difference =
+        today.getTime() -
+        semesterStart.getTime();
+
+
+    const week =
+        Math.floor(
+            difference /
+            (1000 * 60 * 60 * 24 * 7)
+        ) + 1;
+
+
+    if (week >= 1) {
+
+        return week;
+
+    } else {
+
+        return 1;
+
+    }
+
+}
+
+
+// ============================================
+// ОПРЕДЕЛЕНИЕ НАЗВАНИЯ НЕДЕЛИ
 // ============================================
 
 function getWeekName() {
@@ -665,32 +700,8 @@ document.getElementById(
     "click",
     function() {
 
-        const today =
-            new Date();
-
-
-        const difference =
-            today.getTime() -
-            semesterStart.getTime();
-
-
-        const week =
-            Math.floor(
-                difference /
-                (1000 * 60 * 60 * 24 * 7)
-            ) + 1;
-
-
-        if (week >= 1) {
-
-            currentWeek = week;
-
-        } else {
-
-            currentWeek = 1;
-
-        }
-
+        currentWeek =
+            getCurrentWeek();
 
         updateSchedule();
 
@@ -701,5 +712,9 @@ document.getElementById(
 // ============================================
 // ЗАПУСК
 // ============================================
+
+// При открытии сайта автоматически показываем текущую неделю
+currentWeek =
+    getCurrentWeek();
 
 updateSchedule();
