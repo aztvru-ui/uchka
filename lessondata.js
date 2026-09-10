@@ -156,4 +156,83 @@ const lessonData = {
 
   },
 
+  "2026-09-16_3": {
+
+    homework: "Ответить презу",
+
+    topic: "Журналы",
+
+    reportStudent: "-",
+
+    reportTopic: "-",
+
+    classroom: "—",
+
+    teacher: "—",
+
+    notes: "-"
+
+  },
+
+  "2026-09-23_4": {
+
+    homework: "Тема 2. Ответить на вопросы",
+
+    topic: "Очередной скучный бред",
+
+    reportStudent: "-",
+
+    reportTopic: "-",
+
+    classroom: "—",
+
+    teacher: "—",
+
+    notes: "ОФОРМЛЕНИЕ ВЫВЕРЯТЬ!!!",
+
+    materials: [
+      {name: "Пособие", url: "files/Kupri.pdf"}
+
+  },
+
+  "2026-09-17_2": {
+
+    homework: "упражнения 160, 161 - до расплетать, 162 - до завестись, 163 - первы 3 строчки, задание 5 - образец в тетради; морфологические и синтаксические разборы",
+
+    topic: "Причастие",
+
+    reportStudent: "-",
+
+    reportTopic: "-",
+
+    classroom: "—",
+
+    teacher: "—",
+
+    notes: "-",
+
+    materials: [
+      {name: "Методичка по разборам", url: "files/BOLOTO1.pdf"}
+    ]
+
+  },
+
+  "2026-09-16_2": {
+
+    homework: "Подготовить открытие урока по тексту не 5 класс",
+
+    topic: "-",
+
+    reportStudent: "-",
+
+    reportTopic: "-",
+
+    classroom: "—",
+
+    teacher: "—",
+
+    notes: "-"
+
+  },
+
 };
